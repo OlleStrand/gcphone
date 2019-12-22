@@ -248,7 +248,7 @@
     <template v-else-if="state === STATES.ADMIN_VIEW">
       <div class="main-panel-admin">
         <span><label class="adminLabel">Admin Menu</label></span>
-        <div class="userPanel" v-for="user in mdtUsers">
+        <div class="userPanel" v-for="user in mdtUsers" :key="user">
           <span>User {{ user.username }} </span>
           <span>UserID: {{ user.id }}</span>
 
@@ -279,6 +279,7 @@
       </div>
     </template>
 
+  </div>
 </template>
 
 <script>
